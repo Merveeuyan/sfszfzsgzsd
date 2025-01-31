@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürün Yorumları</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ürün Adı</h1>
+
+        <form id="commentForm">
+            <label for="rating">Puan Verin:</label>
+            <select id="rating" required>
+                <option value="">Seçiniz</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <label for="comment">Yorum Yazın:</label>
+            <textarea id="comment" placeholder="Yorumunuzu buraya yazın..." required></textarea>
+
+            <label for="commentType">Yorum Türü:</label>
+            <select id="commentType" required>
+                <option value="Olumlu">Olumlu</option>
+                <option value="Olumsuz">Olumsuz</option>
+                <option value="Nötr">Nötr</option>
+            </select>
+
+            <button type="submit">Yorum Yap</button>
+        </form>
+
+        <label for="filterComments">Yorumları Filtrele:</label>
+        <select id="filterComments">
+            <option value="Tüm Yorumlar">Tüm Yorumlar</option>
+            <option value="Olumlu">Olumlu</option>
+            <option value="Olumsuz">Olumsuz</option>
+            <option value="Nötr">Nötr</option>
+        </select>
+
+        <div id="commentList"></div>
+    </div>
+
+    <script src="style.js"></script>
+</body>
+</html>
